@@ -18,8 +18,8 @@ public class EventLog {
         if (event == null || event.getName() == null || event.getAction() == null){
             throw new IllegalArgumentException();
         }
-        else if (event.getAction() != "Face2Face" && event.getAction() != "PhoneCall" &&
-                 event.getAction() != "TextMessaging" && event.getAction() != "Unknown"){
+        else if (!event.getAction().equals("Face2Face") && !event.getAction().equals("PhoneCall") &&
+                 !event.getAction().equals("TextMessaging") && !event.getAction().equals("Unknown")){
             throw new IllegalArgumentException();
         }
         else {
